@@ -1,0 +1,23 @@
+group = 'de.tum.in.gagern.ornament'
+version = '1.7.1'
+
+apply plugin: 'application'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    maven {
+	url "https://repository.jboss.org/nexus/content/repositories/java.net-m2"
+	}
+}
+
+dependencies {
+    compile 'javax.mail:mail:1.4'
+    compile 'org.jvnet.hudson:netx:0.5-hudson-2'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.3'
+}
+
+mainClassName = "de.tum.in.gagern.ornament.Ornament"

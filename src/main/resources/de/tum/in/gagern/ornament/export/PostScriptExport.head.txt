@@ -1,0 +1,75 @@
+%!PS-Adobe-3.0{0,choice,0#|2# EPSF-3.0}
+%%LanguageLevel: 2
+%%BoundingBox: 0 0 {1} {2}
+%%Creator: {6}
+%%CreationDate: {7,date} {7,time}
+%%DocumentData: Clean7Bit
+%%Requirements: color
+%%Pages: 1
+%%PageOrder: Ascend
+%DocumentSuppliedResources:
+%%+ procset de.tum.in.gagern.ornament.export.PostScriptExport 1.0 0
+%%EndComments
+%%BeginProlog
+'%%BeginResource:
+%%+ procset de.tum.in.gagern.ornament.export.PostScriptExport 1.0 0
+/OrnaDict 20 dict def
+OrnaDict begin
+  [ /W /H /T /V /P /maxy /maxx /miny /minx ] { null def } forall
+  /t matrix def
+  /p matrix def
+  /L {
+    /P exch cvlit def
+    0 6 T length 1 sub {
+      T exch 6 getinterval V //t concatmatrix //p invertmatrix pop
+      newpath
+      currentlinewidth neg dup moveto
+      W currentlinewidth dup add add 0 rlineto
+      0 H currentlinewidth dup add add rlineto
+      W currentlinewidth dup add add neg 0 rlineto
+      closepath
+      gsave
+	//t concat
+	pathbbox newpath P uappend pathbbox 4 2 roll
+	5 4 roll sub neg floor /maxy exch def
+	4 3 roll sub neg floor /maxx exch def
+	3 2 roll sub neg ceiling /miny exch def
+	2 1 roll sub neg ceiling /minx exch def
+	minx miny translate
+	miny 1 maxy {
+	  pop
+	  gsave
+	  minx 1 maxx {
+	    pop
+	    P //p ustroke
+	    1 0 translate
+	  } for
+	  grestore
+	  0 1 translate
+	} for
+      grestore
+    } for
+  } bind def
+end
+%%EndResource'
+%%EndProlog
+%%BeginSetup
+<< /PageSize [{1} {2}] /ImagingBBox null /Duplex false
+   /Policies << /PageSize 3 >>
+>> {0,choice,0#setpagedevice|2#pop % setpagedevice}
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+OrnaDict begin
+/S save def
+/W {1} def
+/H {2} def
+/T [ {3} ] def
+/V [ {4} ] def
+%%EndPageSetup
+{5} setrgbcolor
+0 0 W H rectclip
+0 0 W H rectfill
+1 setlinecap
+1 setlinejoin
+true setstrokeadjust
