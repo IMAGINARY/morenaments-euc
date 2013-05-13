@@ -1,4 +1,4 @@
-jsurf
-=====
+morenaments euc
+===============
 
-A Java based renderer for algebraic surfaces.
+A Java based ornament drawing application/applet using crystallographic groups.
