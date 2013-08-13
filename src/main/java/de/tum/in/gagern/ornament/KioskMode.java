@@ -42,7 +42,7 @@ implements AWTEventListener, KeyEventDispatcher, ActionListener {
 
     private static final String CURSOR_INVISIBLE_KEY = "kioskCursorInvisible";
 
-    private static final boolean CURSOR_INVISIBLE_DEFAULT = true;
+    private static final boolean CURSOR_INVISIBLE_DEFAULT = false;
 
     private final Ornament main;
 
