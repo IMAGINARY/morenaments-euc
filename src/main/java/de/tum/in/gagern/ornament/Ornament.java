@@ -104,7 +104,7 @@ public class Ornament extends JApplet implements Constants {
     public static void main(String[] args) {
         System.setProperty("java.awt.Window.locationByPlatform", "true");
         MorenamentsTheme.activate();
-        boolean debug = false, kiosk = true, showurl = true;
+        boolean debug = false, kiosk = false, showurl = true;
         for (int i = 0; i < args.length; ++i) {
             String arg = args[i];
             if ("-debug".equals(arg))
