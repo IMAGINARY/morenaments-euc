@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="9" height="9" viewBox="0 0 9 9">
+  <defs>
+    <circle id="c" cx="50%" cy="50%" r="50%" stroke="none"/>
+    <radialGradient id="light1" cx="45%" cy="45%" fx="25%" fy="15%" r="55%">
+      <stop stop-color="#ffffff" stop-opacity="1.0" offset="0%"/>
+      <stop stop-color="#ffffff" stop-opacity="0.8" offset="15%"/>
+      <stop stop-color="#ffffff" stop-opacity="0" offset="69%"/>
+      <stop stop-color="#ff0000" stop-opacity="1" offset="70%"/>
+      <stop stop-color="#000000" stop-opacity="0" offset="71%"/>
+      <stop stop-color="#000000" stop-opacity="0.7" offset="100%"/>
+    </radialGradient>
+    <radialGradient
+        id="light2" cx="0" cy="0" fx="0" fy="-0.95" r="1.1"
+        gradientTransform="translate(0.5, 0.5) rotate(-33.7) scale(0.8, 0.5)">
+      <stop stop-color="#0000ff" offset="0%"/>
+      <stop stop-color="#ffffff" offset="1%"/>
+      <stop stop-color="#ff0000" offset="40%"/>
+      <stop stop-color="#ff00ff" offset="40%"/>
+      <stop stop-color="#ff00ff" offset="54%"/>
+      <stop stop-color="#009900" offset="54%"/>
+      <stop stop-color="#000000" offset="99%"/>
+      <stop stop-color="#0000ff" offset="100%"/>
+    </radialGradient>
+    <radialGradient
+        id="light" cx="0" cy="0" fx="0" fy="0.95" r="1.1"
+        gradientTransform="translate(0.5, 0.5) rotate(-33.7) scale(0.8, 0.5)">
+      <stop stop-color="#ffffff" stop-opacity="1.0" offset="0%"/>
+      <stop stop-color="#ffffff" stop-opacity="0.0" offset="40%"/>
+      <stop stop-color="#000000" stop-opacity="0.0" offset="54%"/>
+      <stop stop-color="#000000" stop-opacity="1.0" offset="100%"/>
+    </radialGradient>
+  </defs>
+  <g inkscape:groupmode="layer">
+    <!--use xlink:href="#c" fill="#0000ff"/-->
+    <use xlink:href="#c" fill="url(#light)"/>
+    <!--rect x="4" y="4" width="1" height="1"
+          fill="none" stroke="#ffff00" stroke-width="0.1"/-->
+  </g>
+</svg>
