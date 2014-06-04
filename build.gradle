@@ -1,5 +1,5 @@
 group = 'de.tum.in.gagern.ornament'
-version = '1.7.2'
+version = '1.7.3'
 
 apply plugin: 'application'
 apply plugin: 'java'
