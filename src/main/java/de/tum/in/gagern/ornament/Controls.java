@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import javax.imageio.ImageIO;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import javax.swing.AbstractAction;
@@ -18,6 +19,7 @@ import javax.swing.Action;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JMenu;
@@ -97,7 +99,12 @@ class Controls implements Constants {
         panel.add(buttons, BorderLayout.CENTER);
 
         // UNDO
-        btn=new JButton(I18n._("btn.UNDO"));
+        ImageIcon icon = null;
+        try {
+			icon = new ImageIcon( ImageIO.read(getClass().getResource("undo.png")));
+		} catch (java.io.IOException ex) {
+		}      
+        btn=new JButton( icon );//new JButton(I18n._("btn.UNDO"));
         btn.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     java.util.List l=main.lines;
@@ -112,7 +119,11 @@ class Controls implements Constants {
         // CLEAR
         String clear = I18n._("btn.CLEAR");
         if (clear.length() == 3) clear = "  " + clear + "  ";
-        btn=new JButton(clear);
+        try {
+			icon = new ImageIcon( ImageIO.read(getClass().getResource("clear.png")));
+		} catch (java.io.IOException ex) {
+		}      
+        btn=new JButton( icon );//new JButton(clear);
         btn.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     main.clearLines();
