@@ -133,16 +133,18 @@ class Controls implements Constants {
         buttons.add(btn);
 
         // SNAP
-        if (main.kioskMode != null) {
+        if (main.kioskMode != null && main.kioskMode.enableSnapshots ) {
             QuickSave qs = new QuickSave(main, main.kioskMode.fullScreenWindow);
             if (qs.isEnabled()) {
-                btn=new JButton(I18n._("btn.SNAP"));
+		        try {
+					icon = new ImageIcon( ImageIO.read(getClass().getResource("snapshot.png")));
+				} catch (java.io.IOException ex) {
+				}      
+            
+                btn=new JButton( icon ); //new JButton(I18n._("btn.SNAP"));
                 btn.addActionListener(qs);
                 format(btn);
-                JPanel pan = new JPanel(new FlowLayout());
-                pan.add(btn);
-                
-                panel.add(pan, BorderLayout.SOUTH);
+                buttons.add(btn);
             }
         }
 
@@ -221,7 +223,7 @@ class Controls implements Constants {
                     KioskMode kioskMode;
                     public void actionPerformed(ActionEvent e) {
                         if (kioskMode==null) {
-                            kioskMode=new KioskMode(main, Controls.this);
+                            kioskMode=new KioskMode(main, Controls.this, false);
                             //kioskMode.showUrl(main.doesShowUrl());
                         }
                         kioskMode.configure();

@@ -104,7 +104,7 @@ public class Ornament extends JApplet implements Constants {
     public static void main(String[] args) {
         System.setProperty("java.awt.Window.locationByPlatform", "true");
         MorenamentsTheme.activate();
-        boolean debug = false, kiosk = false, showurl = true;
+        boolean debug = false, kiosk = false, showurl = true, enableSnapshots = false;
         for (int i = 0; i < args.length; ++i) {
             String arg = args[i];
             if ("-debug".equals(arg))
@@ -113,9 +113,11 @@ public class Ornament extends JApplet implements Constants {
                 kiosk = true;
             if ("-nourl".equals(arg))
                 showurl = false;
+            if ("-enableSnapshots".equals(arg))
+            	enableSnapshots = true;
         }
         if (kiosk) {
-            KioskMode km = new KioskMode(null, null);
+            KioskMode km = new KioskMode(null, null, enableSnapshots);
             km.start();
             return;
         }
@@ -131,11 +133,11 @@ public class Ornament extends JApplet implements Constants {
         this(null, false);
     }
 
-    public Ornament(Window wnd, boolean debug) {
+    public Ornament(Window wnd, boolean debug ) {
         this(wnd, debug, null);
     }
 
-    public Ornament(Window wnd, boolean debug, KioskMode kiosk) {
+    public Ornament(Window wnd, boolean debug, KioskMode kiosk ) {
         kioskMode = kiosk;
         hooks = new ArrayList();
         renderingHints=new RenderingHints(null);

@@ -63,6 +63,8 @@ implements AWTEventListener, KeyEventDispatcher, ActionListener {
     private boolean active;
 
     JFrame fullScreenWindow;
+    
+    boolean enableSnapshots;
 
     private GraphicsDevice gd;
 
@@ -72,9 +74,10 @@ implements AWTEventListener, KeyEventDispatcher, ActionListener {
 
     private Timer timer;
 
-    public KioskMode(Ornament main, Controls controls) {
+    public KioskMode(Ornament main, Controls controls, boolean enableSnapshots ) {
         this.main = main;
         this.controls = controls;
+        this.enableSnapshots = enableSnapshots;
         prefs = Preferences.userNodeForPackage(KioskMode.class);
         quickSave = new QuickSave(main, fullScreenWindow);
         timer = new Timer(RESET_TIMEOUT_DEFAULT, this);
