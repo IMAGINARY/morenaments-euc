@@ -15,7 +15,7 @@ Build a distribution containing all binaries and shell/batch scripts for running
 Now you should find a `.zip` file in `build/distributions`.
 
 
-Program options (an be added when running the shell/batch scripts):
+Program options (can be added when running the shell/batch scripts):
 
 ```
 -debug           Start in debug mode
